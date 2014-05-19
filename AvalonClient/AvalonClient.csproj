@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA9BF24E-69CC-4CE6-82F8-620811272295}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvalonClient</RootNamespace>
+    <AssemblyName>AvalonClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MerlinOutcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MerlinOutcome.Designer.cs">
+      <DependentUpon>MerlinOutcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MissionVote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MissionVote.Designer.cs">
+      <DependentUpon>MissionVote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickMerlin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickMerlin.Designer.cs">
+      <DependentUpon>PickMerlin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PickTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickTeam.Designer.cs">
+      <DependentUpon>PickTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Players.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultForm.Designer.cs">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamOutcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamOutcome.Designer.cs">
+      <DependentUpon>TeamOutcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamVote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamVote.Designer.cs">
+      <DependentUpon>TeamVote.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerlinOutcome.resx">
+      <DependentUpon>MerlinOutcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MissionVote.resx">
+      <DependentUpon>MissionVote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickMerlin.resx">
+      <DependentUpon>PickMerlin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickTeam.resx">
+      <DependentUpon>PickTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultForm.resx">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamOutcome.resx">
+      <DependentUpon>TeamOutcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamVote.resx">
+      <DependentUpon>TeamVote.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Excalibur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Success.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Failure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Round1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Round2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Round3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Round4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Round5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Fail_Chalicel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Success_Chalice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\ApproveTeam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\RejectTeam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Broken_Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\card_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Assassin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Bedevere.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Black Knight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Bridge Keeper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Galahad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\King_Arthur.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Lancelot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Merlin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Morgana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Nee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Oberon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Patsy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Rabbit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Mordred.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\BackDrop2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\BackDrop3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\BackDrop4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Uknown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\BackDropMain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\BackDrop5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\BackDrop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Vote1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Vote2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Vote3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Vote4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Vote5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Pouch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Chalice_evil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\bloody-dagger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Merlin_Alive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Choose_Wisely.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\thumbs_UpDown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Excalibur_icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
